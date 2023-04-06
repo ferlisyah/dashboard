@@ -1,200 +1,640 @@
-# [Argon Dashboard 2](http://demos.creative-tim.com/argon-dashboard/pages/dashboard.html?ref=readme-ad2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/argon-dashboard&text=Check%20Soft%20UI%20Dashboard%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#softdesign%20#html%20https://www.creative-tim.com/product/argon-dashboard) [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/FhCJCaHdQa)
+# [Vue Black Dashboard Laravel](https://vue-black-dashboard-laravel.creative-tim.com/?ref=vbl-readme)
 
-![version](https://img.shields.io/badge/version-2.0.4-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/argon-dashboard.svg)](https://github.com/creativetimofficial/argon-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-dashboard.svg)](https://github.com/creativetimofficial/argon-dashboard/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/vue-black-dashboard-laravel.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-black-dashboard-laravel/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-black-dashboard-laravel/vue-black-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-black-dashboard-laravel/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard-2.jpg)
+*Frontend version*: Black Dashboard v1.0.1. More info at https://www.creative-tim.com/product/black-dashboard
 
-Most complex and innovative Dashboard Made by [Creative Tim](https://creative-tim.com/). Check our latest Free Bootstrap 5 Dashboard.
+*Vue version*: Vue Black Dashboard v1.1.1. More info at https://www.creative-tim.com/product/vue-black-dashboard
 
-Designed for those who like bold elements and beautiful websites. Made of hundred of elements, designed blocks and fully coded pages, Argon Dashboard 2 is ready to help you create stunning websites and webapps.
+![Product Image](https://s3.amazonaws.com/creativetim_bucket/products/402/original/opt_bd_vuelaravel_thumbnail.jpg)
 
-We created many examples for pages like Sign In, Profile and so on. Just choose between a Basic Design, an illustration or a cover and you are good to go!
+What if your frontend came not only with reusable components, but also with a reusable backend? API-driven development is more than just a buzzword and we partnered with [UPDIVISION](https://updivision.com) to prove it. Build awesome-looking apps with a flexible architecture across a variety of devices and operating systems with Vue Black Dashboard Laravel. 
 
-**Fully Coded Elements**
+If you want to get more features, go PRO with [Vue Black Dashboard PRO Laravel](https://www.creative-tim.com/product/vue-black-dashboard-pro-laravel)
 
-Argon Dashboard 2 is built with over 70 frontend individual elements, like buttons, inputs, navbars, navtabs, cards or alerts, giving you the freedom of choosing and combining. All components can take variations in colour, that you can easily modify using SASS files and classes.
+# Download
 
-You will save a lot of time going from prototyping to full-functional code, because all elements are implemented.
-This Free Bootstrap 5 Dashboard is coming with prebuilt design blocks, so the development process is seamless,
-switching from our pages to the real website is very easy to be done.
+For the free version of the project you can either
+- download the .zip file from the Creative Tim site and extract it or 
+- make a clone from the Github repository
 
-View [all components here](https://www.creative-tim.com/learning-lab/bootstrap/alerts/argon-dashboard?ref=readme-ad2).
+You will get two project folders: one for the Laravel API project and one for the Vue frontend.
 
-**Documentation built by Developers**
+# Laravel API Setup
 
-Each element is well presented in a very complex documentation.
-You can read more about the <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard" target="_blank">documentation here</a>.
+## Introduction
 
-**Example Pages**
+JSON:API is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those requests. It is designed to minimize both the number of requests and the amount of data transmitted between clients and servers. This efficiency is achieved without compromising readability, flexibility, or discoverability.
 
-If you want to get inspiration or just show something directly to your clients,
-you can jump start your development with our pre-built example pages. You will be able
-to quickly set up the basic structure for your web project.
-View <a href="https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html" target="_blank">example pages here</a>.
+[Click here to go to the JSON:API docs](https://explore.postman.com/api/6357/laravel-jsonapi)
 
+## Prerequisites
+
+### JSON:API backend
+The Laravel JSON:API backend project requires a proper multi-threaded web server such as Apache/Nginx environment with PHP, Composer and MySQL.
+
+**Do not use `php artisan serve` as it will result in stalled requests due to the single-threaded nature of the built-in PHP web server.** 
+
+We strongly recommend using [Laradock](https://laradock.io/) for Linux and Mac or [Laragon](https://laragon.org/download/) for Windows if possible.
+
+Other options for your local environment:
+- Windows: [How to install WAMP on Windows](https://updivision.com/blog/post/beginner-s-guide-to-setting-up-your-local-development-environment-on-windows)
+- Linux: [How to install LAMP on Linux](https://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
+- Mac: [How to install MAMP on MAC](https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/)
+
+You will also need to install Composer 2: [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
+
+### Vue Black frontend
+The Vue Black frontend project requires a working local environment with NodeJS version 8.9 or above (8.11.0+ recommended), npm, VueCLI.
+
+Install Node: https://nodejs.org/ (version 8.11.0+ recommended)
+
+Install NPM: https://www.npmjs.com/get-npm
+
+Install VueCLI: https://cli.vuejs.org/guide/installation.html
+
+## Laravel JSON:API Project Installation
+
+1. Navigate in your Laravel API project folder: `cd your-laravel-json-api-project`
+2. Install project dependencies: `composer install`
+3. Create a new .env file: `cp .env.example .env`
+3. Add your own database credentials in the .env file in DB_DATABASE, DB_USERNAME, DB_PASSWORD
+5. Create users table: `php artisan migrate --seed`
+6. Generate application key: `php artisan key:generate`
+7. Install Laravel Passport: `php artisan passport:install` and set in the .env file the CLIENT_ID and CLIENT_SECRET that you receive
+8. Add your own mailtrap.io credentials in MAIL_USERNAME and MAIL_PASSWORD in the .env file
+
+## Vue Black Dashboard Project Installation
+
+1. Navigate to your Vue Dashboard project folder:  `cd your-vue-black-dashbord-project`
+2. Install project dependencies: `npm install`
+3. Create a new .env file: `cp .env.example .env`
+4. `VUE_APP_BASE_URL` should contain the URL of your Vue Black Dashboard Project (eg. http://localhost:8080/)
+5. `VUE_APP_API_BASE_URL` should contain the URL of your Laravel JSON:API Project. (eg. http://localhost:3000/api/v1)
+6. Run `npm run dev` to start the application in a local development environment or `npm run build`  to build release distributables.
+
+## Usage
+
+Register a user or login using admin@jsonapi.com and secret and start testing the theme.
+
+Besides the dashboard and the auth pages this theme also has an edit profile page. All the necessary files are installed out of the box and all the needed routes are added to `src\router\index.js`. Keep in mind that all the features can be viewed once you log in using the credentials provided above or by registering your own user.
+
+### Dashboard
+
+You can access the dashboard either by using the "**Dashboards/Dashboard**" link in the left sidebar or by adding **/home** in the URL.
+
+### Login
+
+The login functionality is fully implemented in our theme helping you to start your project in no time. To login into dashboard you just have to add **/login** in the URL and fill the login form with the credentials (user: **admin@jsonapi.com** and password: **secret**).
+
+The `src\pages\Login.vue` is the Vue component which handles the login functinality. You can easily adapt it to your needs.
+
+It uses the auth store located in `src\store\modules\auth.js`.
+
+#### Login card
+```
+<div class="col-lg-4 col-md-6 ml-auto mr-auto">
+  <form @submit.prevent="handleSubmit()">
+    <card class="card-login card-white">
+      <template slot="header">
+        <img src="/img/card-primary.png" alt="" />
+        <h1 class="card-title">Log in</h1>
+      </template>
+
+      <div>
+        <ValidationProvider
+          name="email"
+          rules="required|email"
+          v-slot="{ passed, failed, errors }"
+        >
+        <base-input
+          required
+          v-model="email"
+          type="email"
+          placeholder="Email"
+          addon-left-icon="tim-icons icon-email-85"
+          :error="errors[0]"
+          :class="[{ 'has-success': passed }, { 'has-danger': failed }]">
+        </base-input>
+        <validation-error :errors="apiValidationErrors.email" />
+        </ValidationProvider>
+
+        <ValidationProvider
+          name="password"
+          rules="required|min:5"
+          v-slot="{ passed, failed, errors }"
+        >
+        <base-input
+          required
+          v-model="password"
+          placeholder="Password"
+          addon-left-icon="tim-icons icon-lock-circle"
+          type="password"
+          :error="errors[0]"
+          :class="[{ 'has-success': passed }, { 'has-danger': failed }]">
+        </base-input>
+        <validation-error :errors="apiValidationErrors.password" />
+      </ValidationProvider>
+      </div>
+
+      <div slot="footer">
+        <base-button native-type="submit" type="primary" class="mb-3" size="lg" block>
+          Get Started
+        </base-button>
+        <div class="pull-left">
+          <h6>
+            <router-link class="link footer-link" to="/register">
+              Create Account
+            </router-link>
+          </h6>
+        </div>
+
+        <div class="pull-right">
+          <h6><a href="#pablo" class="link footer-link">Need Help?</a></h6>
+        </div>
+      </div>
+    </card>
+  </form>
+  <!-- </ValidationObserver> -->
+</div>
+```
+
+### Register
+
+The register functionality is fully implemented in our theme helping you to start your project in no time. To register a new user you just have to add **/register** in the URL or click on register link from login page and fill the register form with user details.
+
+The `src\pages\Register.vue` is the Vue component which handles the login functinality. You can easily extend it to your needs.
+
+It uses the auth store located in `src\store\modules\auth.js`.
+
+#### Register card
+```
+<div class="col-md-7 mr-auto">
+  <form @submit.prevent="handleSubmit()">
+    <card class="card-register card-white">
+      <template slot="header">
+        <img class="card-img" src="/img/card-primary.png" alt="Card image"/>
+        <h4 class="card-title">Register</h4>
+      </template>
+
+      <ValidationProvider name="name" rules="required" v-slot="{ passed, failed, errors }">
+        <base-input
+          required
+          v-model="name"
+          placeholder="Full Name"
+          addon-left-icon="tim-icons icon-single-02"
+          type="text"
+          :error="errors[0]"
+          :class="[{ 'has-success': passed }, { 'has-danger': failed }]">
+        </base-input>
+      </ValidationProvider>
+
+      <ValidationProvider name="email" rules="required|email" v-slot="{ passed, failed, errors }">
+        <base-input
+          required
+          v-model="email"
+          placeholder="Email"
+          addon-left-icon="tim-icons icon-email-85"
+          type="email"
+          :error="errors[0]"
+          :class="[{ 'has-success': passed }, { 'has-danger': failed }]">
+        </base-input>
+      </ValidationProvider>
+
+      <ValidationProvider name="password" rules="required" v-slot="{ passed, failed, errors }">
+        <base-input
+          required
+          v-model="password"
+          placeholder="Password"
+          addon-left-icon="tim-icons icon-lock-circle"
+          type="password"
+          :error="errors[0]"
+          :class="[{ 'has-success': passed }, { 'has-danger': failed }]">
+        </base-input>
+      </ValidationProvider>
+
+      <ValidationProvider name="password" rules="required" v-slot="{ passed, failed, errors }">
+        <base-input
+          required
+          placeholder="Confirm Password"
+          type="password"
+          name="Password confirmation"
+          v-model="password_confirmation"
+          addon-left-icon="tim-icons icon-lock-circle"
+          :error="errors[0]"
+          :class="[{ 'has-success': passed }, { 'has-danger': failed }]">
+        </base-input>
+      </ValidationProvider>
+
+      <base-checkbox v-model="boolean" class="text-left">
+        I agree to the <a href="#something">terms and conditions</a>.
+      </base-checkbox>
+
+      <base-button native-type="submit" slot="footer" type="primary" round block size="lg">
+        Get Started
+      </base-button>
+    </card>
+  </form>
+</div>
+```
+
+### Profile edit
+
+You have the option to edit the current logged in user's profile information (name, email, profile picture) and password. To access this page, just click the "**Examples/Profile**" link in the left sidebar or add **/profile** in the URL.
+
+The `src\pages\Examples\UserProfile` is the folder with Vue components that handle the update of the user information and password.
+
+#### Edit profile component
+```
+<template>
+  <card class="stacked-form" title="Stacked Form">
+    <h4 slot="header" class="card-title">Edit Profile</h4>
+    <form @submit.prevent>
+      <base-input v-model="user.email" label="Email" type="email" placeholder="Enter email"/>
+      <validation-error :errors="apiValidationErrors.email" /> 
+      <base-input v-model="user.name" label="Name" placeholder="Name"/>
+      <validation-error :errors="apiValidationErrors.name" />
+      <base-button @click="updateProfile()" class="mt-3" native-type="submit" type="primary">Submit</base-button>
+    </form>
+  </card>
+</template>
+
+<script>
+import ValidationError from "@/components/ValidationError.vue";
+import formMixin from "@/mixins/form-mixin";
+export default {
+  mixins: [formMixin],
+  components: {
+    ValidationError
+  },
+  props: {
+      user: Object
+    },
+  methods: {
+     async updateProfile() {
+        try {
+          await this.$store.dispatch("profile/update", this.user)
+          this.resetApiValidation();
+          this.$notify({
+            type: 'success',
+            message: 'Profile updated successfully.',
+            icon: 'tim-icons icon-bell-55',
+          })
+          await this.$store.getters["profile/me"]
+        } catch (e) {
+          this.$notify({
+            type: 'danger',
+            message: 'Oops, something went wrong!',
+            icon: 'tim-icons icon-bell-55',
+          })
+          this.setApiValidation(e.response.data.errors)
+        }
+    }
+  }
+}
+</script>
+```
+#### Edit password component
+```
+<template>
+  <card class="stacked-form" title="Change Password">
+    <h4 slot="header" class="card-title">Change Password</h4>
+    <form ref="password_form" @submit.prevent>
+      <div>
+        <base-input v-model="password" label="Password" type="password" placeholder="Password"/>
+        <validation-error :errors="apiValidationErrors.password"/>
+        <base-input v-model="password_confirmation" label="Password Confirmation" type="password" placeholder="Password Confirmation"/>
+        <validation-error :errors="apiValidationErrors.password_confirmation"/>
+        <base-button class="mt-3" native-type="submit" type="primary" @click="changePassword()"
+          >Submit</base-button
+        >
+      </div>
+    </form>
+  </card>
+</template>
+<script>
+  import ValidationError from "@/components/ValidationError.vue";
+  import formMixin from "@/mixins/form-mixin";
+  export default {
+    name: "edit-password-card",
+
+    props: {
+      user: Object
+    },
+
+    components: {ValidationError},
+
+    mixins: [formMixin],
+
+    data: () => ({
+      password: null,
+      password_confirmation: null,
+    }),
+
+    methods: {
+      async changePassword() {
+        this.user.password = this.password;
+        this.user.password_confirmation = this.password_confirmation;
+
+        try {
+          this.resetApiValidation();
+          await this.$store.dispatch("users/update", this.user)
+          this.$notify({
+            type: 'success',
+            message: 'Password changed successfully.',
+            icon: 'tim-icons icon-bell-55',
+          })
+          this.user = await this.$store.getters["profile/me"]
+          this.$refs["password_form"].reset();
+        } catch (e) {
+          this.$notify({
+            type: 'danger',
+            message: 'Oops, something went wrong!',
+            icon: 'tim-icons icon-bell-55',
+          })
+          this.setApiValidation(e.response.data.errors)
+        }
+      }
+    }
+  };
+</script>
+```
 
 ## Table of Contents
 
+* [Versions](#versions)
 * [Demo](#demo)
-* [Quick Start](#quick-start)
 * [Documentation](#documentation)
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
 * [Resources](#resources)
 * [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
 
-
-
 ## Versions
 
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg" height="80" />](#)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png" height="80" />](#)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue.jpg" height="80" />](#)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/json-api.png" height="75" />](#)
 
+| HTML                                                                                                                                                                                           | Laravel                                                                                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Black Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/93/original/opt_bd_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard?ref=vbdl-readme) | [![Black Dashboard Laravel](https://s3.amazonaws.com/creativetim_bucket/products/164/original/opt_blk_laravel_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-laravel?ref=vbdl-readme) |
 
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/html-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-react)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-dashboard)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-angular)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/aspnet-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-asp-net)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nodejs-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-nodejs)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/laravel_logo.png" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-laravel)
-
-
-
-| HTML | React | Vue | Angular |
-| --- | --- | --- | --- |
-| [![Argon Dashboard HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard.jpg)](https://www.creative-tim.com/product/argon-dashboard) | [![Argon Dashboard React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/argon-dashboard-react.jpg)](https://www.creative-tim.com/product/argon-dashboard-react) | [![Vue Argon Dashboard ](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-dashboard/vue-argon-dashboard.jpg)](https://www.creative-tim.com/product/vue-argon-dashboard) | [![Argon Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-angular/argon-dashboard-angular.jpg)](https://www.creative-tim.com/product/argon-dashboard-angular)
-
-| Asp.net | Node.js | Laravel |
-| --- | --- | --- |
-| [![Argon Dashboard Asp.net](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-aspnet/argon-dashboard-aspnet.jpg)](https://www.creative-tim.com/product/argon-dashboard-asp-net) | [![Argon Dashboard Node.js](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-nodejs/argon-dashboard-nodejs.jpg)](https://www.creative-tim.com/product/argon-dashboard-nodejs) | [![Argon Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-laravel/argon-dashboard-laravel.jpg)](https://www.creative-tim.com/product/argon-dashboard-laravel) |
-
-
-
+| Vue                                                                                                                                                                                                        | Vue & Laravel                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![Vue Black Dashboard Pro](https://s3.amazonaws.com/creativetim_bucket/products/99/original/opt_bd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard?ref=vbdl-readme) | [![Vue Black Dashboard Pro Laravel ](https://s3.amazonaws.com/creativetim_bucket/products/402/original/opt_bd_vuelaravel_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard-laravel?ref=vbdl-readme) |
 ## Demo
 
-
-
-- [Dashboard page](https://demos.creative-tim.com/argon-dashboard/pages/dashboard)
-- [User profile page](https://demos.creative-tim.com/argon-dashboard/pages/profile)
-- [Tables page ](https://demos.creative-tim.com/argon-dashboard/pages/tables)
-- [RTL Page](https://demos.creative-tim.com/argon-dashboard/pages/rtl)
-- [Sign Up page](https://demos.creative-tim.com/argon-dashboard/pages/sign-up)
-- [Login page](https://demos.creative-tim.com/argon-dashboard/pages/sign-in)
-
-
-| Dashboard page | User profile page | Tables page  |
+| Register | Login | Dashboard |
 | --- | --- | ---  |
-| [![Dashboard page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/dashboard.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/dashboard)  | [![User profile page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/profile.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/profile.html)  | [![Tables pages](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/tables.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/tables.html)
+| [![Register](https://github.com/creativetimofficial/public-assets/raw/master/vue-black-dashboard-laravel/Register.png)](https://vue-black-dashboard-laravel.creative-tim.com/register?ref=vbdl-readme) | [![Login](https://github.com/creativetimofficial/public-assets/raw/master/vue-black-dashboard-laravel/Login.png)](https://vue-black-dashboard-laravel.creative-tim.com/login?ref=vbdl-readme)  | [![Dashboard](https://github.com/creativetimofficial/public-assets/raw/master/vue-black-dashboard-laravel/Dashboard.png)](https://vue-black-dashboard-laravel.creative-tim.com/?ref=vbdl-readme) |
 
-| RTL page | Sign Up page | Login page  |
+| Profile Page | Users Page | Tables Page  |
 | --- | --- | ---  |
-| [![RTL page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/rtl.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/rtl.html)  | [![Sign Up page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/signup.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/sign-up.html)  | [![Login page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/signin.jpg)](https://demos.creative-tim.com/argon-dashboard/pages/sign-in.html)
-
-
-
-
-
-## Download and Installation
-
-- [Download from Github](https://github.com/creativetimofficial/argon-dashboard/archive/master.zip)
-- [Download from Creative Tim](https://www.creative-tim.com/product/argon-dashboard)
-
-
-- Install with Npm: `npm i @creative-tim-official/argon-dashboard-free`
-
-- Install with Yarn: `yarn add @creative-tim-official/argon-dashboard-free`
-
-- Install with Composer: `composer create-project creativetimofficial/argon-dashboard-free`
-
-- Clone from Github: `git clone https://github.com/creativetimofficial/argon-dashboard.git`
-
+| [![Profile Page](https://github.com/creativetimofficial/public-assets/raw/master/vue-black-dashboard-laravel/Profile.png)](https://vue-black-dashboard-laravel.creative-tim.com/examples/user-profile?ref=vbdl-readme) | [![Users Page](https://github.com/creativetimofficial/public-assets/raw/master/vue-black-dashboard-laravel/Users.png)](https://vue-black-dashboard-laravel.creative-tim.com/examples/user-management/list-users?ref=vbdl-readme) | [![Tables Page](https://github.com/creativetimofficial/public-assets/raw/master/vue-black-dashboard-laravel/Tables.png)](https://vue-black-dashboard-laravel.creative-tim.com/table-list?ref=vbdl-readme)
+[View More](https://vue-black-dashboard-laravel.creative-tim.com/?ref=vbdl-readme)
 
 ## Documentation
-
-The documentation for the Argon Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard).
+The documentation for the Vue Black Dashboard Laravel is hosted at our [website](https://vue-black-dashboard-laravel.creative-tim.com/documentation?ref=vbdl-readme).
 
 ## File Structure
-
-Within the download you'll find the following directories and files:
-
 ```
-argon-dashboard
-  ├── assets
-  │   ├── css
-  │   ├── fonts
-  │   ├── img
-  │   ├── js
-  │   │   ├── core
-  │   │   ├── plugins
-  │   │   └── argon-dashboard.js
-  │   │   └── argon-dashboard.js.map
-  │   │   └── argon-dashboard.min.js
-  │   └── scss
-  │       ├── argon-dashboard
-  │       └── argon-dashboard.scss
-  ├── docs
-  │   ├── documentation.html
-  ├── pages
-  ├── CHANGELOG.md
-  ├── gulpfile.js
-  ├── package.json
+|   .browserslistrc
+|   .eslintrc.js
+|   .gitignore
+|   .jshintrc
+|   babel.config.js
+|   CHANGELOG.md
+|   package-lock.json
+|   package.json
+|   postcss.config.js
+|   README.md
+|   yarn.lock
+|
++---public
+|   |   .DS_Store
+|   |   favicon.png
+|   |   index.html
+|   |
+|   \---img
+|       |   apple-icon.png
+|       |   bg-pricing.jpg
+|       |   bg3.jpg
+|       |   default-avatar.png
+|       |   favicon.png
+|       |   image_placeholder.jpg
+|       |   laravel-vue.svg
+|       |   placeholder.jpg
+|
+|
+|---src
+    |   .DS_Store
+    |   App.vue
+    |   globalComponents.js
+    |   globalDirectives.js
+    |   main.js
+    |
+    |---assets
+    |   |   .DS_Store
+    |   |
+    |   |---css
+    |   |       demo.css
+    |   |
+    |   |
+    |   └── sass
+    │       ├── dashboard
+    │       └── vendor
+    │           └── bootstrap-rtl.scss
+    ├── components
+    │   ├── BaseAlert.vue
+    │   ├── BaseButton.vue
+    │   ├── BaseCheckbox.vue
+    │   ├── BaseDropdown.vue
+    │   ├── BaseNav.vue
+    │   ├── BaseRadio.vue
+    │   ├── BaseTable.vue
+    │   ├── Cards
+    │   │   ├── Card.vue
+    │   │   └── StatsCard.vue
+    │   ├── Charts
+    │   │   ├── BarChart.js
+    │   │   ├── config.js
+    │   │   ├── LineChart.js
+    │   │   └── utils.js
+    │   ├── CloseButton.vue
+    │   ├── index.js
+    │   ├── Inputs
+    │   │   └── BaseInput.vue
+    │   ├── Modal.vue
+    │   ├── NavbarToggleButton.vue
+    │   ├── NotificationPlugin
+    │   │   ├── index.js
+    │   │   ├── Notifications.vue
+    │   │   └── Notification.vue
+    │   ├── SidebarPlugin
+    │   │   ├── index.js
+    │   │   ├── SidebarLink.vue
+    │   │   └── SideBar.vue
+    │   └── ValidationError.vue
+    ├── layout
+    │   ├── dashboard
+    │   │   ├── AuthLayout.vue
+    │   │   ├── ContentFooter.vue
+    │   │   ├── Content.vue
+    │   │   ├── DashboardLayout.vue
+    │   │   ├── MobileMenu.vue
+    │   │   └── TopNavbar.vue
+    │   └── starter
+    │       ├── Content.vue
+    │       ├── MobileMenu.vue
+    │       ├── SampleFooter.vue
+    │       ├── SampleLayout.vue
+    │       ├── SampleNavbar.vue
+    │       └── SamplePage.vue
+    ├── main.js
+    ├── middleware
+    │   ├── auth.js
+    │   └── guest.js
+    ├── mixins
+    │   └── form-mixin.js
+    ├── pages
+    │   ├── Dashboard
+    │   │   ├── TaskList.vue
+    │   │   └── UserTable.vue
+    │   ├── Dashboard.vue
+    │   ├── Examples
+    │   │   ├── UserManagement
+    │   │   │   └── ListUserPage.vue
+    │   │   ├── UserProfile
+    │   │   │   ├── EditPasswordCard.vue
+    │   │   │   └── EditProfileCard.vue
+    │   │   └── UserProfile.vue
+    │   ├── Icons.vue
+    │   ├── Login.vue
+    │   ├── Maps.vue
+    │   ├── NotFoundPage.vue
+    │   ├── Notifications
+    │   │   └── NotificationTemplate.vue
+    │   ├── Notifications.vue
+    │   ├── Password
+    │   │   ├── Email.vue
+    │   │   └── Reset.vue
+    │   ├── Profile
+    │   │   ├── EditProfileForm.vue
+    │   │   └── UserCard.vue
+    │   ├── Profile.vue
+    │   ├── Register.vue
+    │   ├── TableList.vue
+    │   └── Typography.vue
+    ├── plugins
+    │   ├── blackDashboard.js
+    │   ├── globalComponents.js
+    │   ├── globalDirectives.js
+    │   ├── isDemo.js
+    │   └── RTLPlugin.js
+    ├── registerServiceWorker.js
+    ├── router
+    │   ├── index.js
+    │   ├── routes.js
+    │   └── starterRouter.js
+    └── store
+        ├── index.js
+        ├── modules
+        │   ├── alerts-module.js
+        │   ├── auth.js
+        │   ├── profile-module.js
+        │   ├── reset.js
+        │   └── users-module.js
+        └── services
+            ├── profile-service.js
+            └── users-service.js
 ```
 
 ## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
 
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
 
 ## Resources
-
-- Demo: <https://demos.creative-tim.com/argon-dashboard>
-- Documentation: <https://www.creative-tim.com/learning-lab/bootstrap/overview/argon-dashboard>
+- Demo: <https://vue-black-dashboard-laravel.creative-tim.com/?ref=vbdl-readme>
+- Download Page: <https://www.creative-tim.com/product/vue-black-dashboard-laravel?ref=vbdl-readme>
+- Documentation: <https://vue-black-dashboard-laravel.creative-tim.com/documentation?ref=vbdl-readme>
 - License Agreement: <https://www.creative-tim.com/license>
 - Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/argon-dashboard/issues)
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/vue-black-dashboard-laravel/issues)
+- **Dashboards:**
+
+| HTML                                                                                                                                                                                           | Laravel                                                                                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Black Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/93/original/opt_bd_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard?ref=vbdl-readme) | [![Black Dashboard Laravel](https://s3.amazonaws.com/creativetim_bucket/products/164/original/opt_blk_laravel_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-laravel?ref=vbdl-readme) |
+
+| Vue                                                                                                                                                                                                        | Vue & Laravel                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![Vue Black Dashboard Pro](https://s3.amazonaws.com/creativetim_bucket/products/99/original/opt_bd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard?ref=vbdl-readme) | [![Vue Black Dashboard Pro Laravel ](https://s3.amazonaws.com/creativetim_bucket/products/402/original/opt_bd_vuelaravel_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard-laravel?ref=vbdl-readme) |
+
+## Change log
+
+Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
+
+## Credits
+
+- [Creative Tim](https://creative-tim.com/?ref=vbdl-readme)
+- [UPDIVISION](https://updivision.com)
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Argon Dashboard. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for the Black Dashboard Laravel. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Argon Dashboard. Check the CHANGELOG from your copy on our [website](https://www.creative-tim.com).
+1. Make sure that you are using the latest version of the Black Dashboard Laravel. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=vbdl-readme).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
 ## Licensing
 
-
-- Copyright &copy; 2022 Creative Tim (https://www.creative-tim.com)
-- Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
-
+- Copyright Creative Tim (https://www.creative-tim.com/?ref=vbdl-readme)
+- Licensed under MIT (https://github.com/creativetimofficial/vue-black-dashboard-laravel/blob/master/LICENSE.md)
 
 ## Useful Links
 
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=mk-github-readme) (earn money)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
 - [Blog Creative Tim](http://blog.creative-tim.com/)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=mk-github-readme) from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=mk-github-readme) from Creative Tim
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=mk-github-readme) from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=mk-github-readme) from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=mk-github-readme) from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=mk-github-readme) from Creative Tim
-- [Argon Design](https://www.creative-tim.com/design-system/argon)
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=mk-github-readme)
-- [Get Discount](https://www.creative-tim.com/coupon)
-
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=vbdl-readme) from Creative Tim
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=vbdl-readme) from Creative Tim
+- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=vbdl-readme) from Creative Tim
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=vbdl-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=vbdl-readme) from Creative Tim
+- Check our Bundles [here](https://www.creative-tim.com/bundles??ref=vbdl-readme)
 
 ## Social Media
 
-Twitter: <https://twitter.com/CreativeTim>
+### Creative Tim:
 
-Facebook: <https://www.facebook.com/CreativeTim>
+Twitter: <https://twitter.com/CreativeTim?ref=vbdl-readme>
 
-Dribbble: <https://dribbble.com/creativetim>
+Facebook: <https://www.facebook.com/CreativeTim?ref=vbdl-readme>
 
-TikTok: <https://tiktok.com/@creative.tim>
+Dribbble: <https://dribbble.com/creativetim?ref=vbdl-readme>
 
-Instagram: <https://instagram.com/creativetimofficial>
+Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=vbdl-readme>
+
+
+### Updivision:
+
+Twitter: <https://twitter.com/updivision?ref=vbdl-readme>
+
+Facebook: <https://www.facebook.com/updivision?ref=vbdl-readme>
+
+Linkedin: <https://www.linkedin.com/company/updivision?ref=vbdl-readme>
+
+Updivision Blog: <https://updivision.com/blog/?ref=vbdl-readme>
+
+## Credits
+
+- [Creative Tim](https://creative-tim.com/?ref=vbdl-readme)
+- [UPDIVISION](https://updivision.com)
